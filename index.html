@@ -200,59 +200,86 @@
 
                             </div>
                             <div class="col-md-8">
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-sm-6 col-lg-4">
-                                            <label>Industries</label>
-                                            <select name="industries" id="industries" class="dropdown" style="padding:6px;height: 40px;">
-                                                <option value="">Legal</option>
-                                                <option value="">Aerospace & Defense</option>
-                                                <option value="">Agriculture</option>
-                                                <option value="">Arts, Entertainment & Recreation</option>
-                                                <option value="">Pharmaceutical & Biotechnology</option>
-                                                <option value="">Management & Consulting</option>
-                                                <option value="">Personal Consumer Services</option>
-                                                <option value="">Education</option>
-                                                <option value="">Financial Services</option>
-                                                <option value="">Government & Public Administration</option>
-                                                <option value="">Healthcare</option>
-                                                <option value="">Information Technology</option>
-                                                <option value="">Insurance</option>
-                                                <option value="">Manufacturing</option>
-                                                <option value="">Media & Communication</option>
-                                                <option value="">Nonprofit & NGO</option>
-                                                <option value="">Energy, Mining & Utilities</option>
-                                                <option value="">Real Estate</option>
-                                                <option value="">Restaurants & Food Service</option>
-                                                <option value="">Retail & Wholesale</option>
-                                                <option value="">Telecommunications</option>
-                                                <option value="">Transportation & Logistics</option>
-                                                <option value="">Hotels & Travel Accommodation</option>
-                                                <option value="">Human Resources & Staffing</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-sm-6 col-lg-4">
-                                            <label>Location</label>
-                                            <div class="autocomplete" style="">
-                                                <input id="myInput" type="text" name="myCountry" placeholder="Country">
-                                            </div>
-                                        </div>
-
-
-
-                                        <div class="col-sm-12" style="margin-top:30px;"><button type="submit" class="btn-upper btn-yellow btn" id="drawChart">Find out</button></div>
-
-                                        <div class="container">
-                                            <canvas id="myChart"></canvas>
+                                <!--<form>-->
+                                <div class="row" style="margin-left: 0px;">
+                                    <div class="form-group col-sm-4 col-lg-4">
+                                        <label>Job</label>
+                                        <div class="autocomplete" style="">
+                                            <input id="txtJob" type="text" name="job" placeholder="Job">
                                         </div>
                                     </div>
 
-                                </form>
-                            </div>
-                            <div class="col-md-2">
+                                    <div class="form-group col-sm-4 col-lg-4">
+                                        <label>Industries</label>
+                                        <select name="industries" id="industries" class="dropdown" style="padding:6px;height: 40px;">
+                                            <option value="">Legal</option>
+                                            <option value="">Aerospace & Defense</option>
+                                            <option value="">Agriculture</option>
+                                            <option value="">Arts, Entertainment & Recreation</option>
+                                            <option value="">Pharmaceutical & Biotechnology</option>
+                                            <option value="">Management & Consulting</option>
+                                            <option value="">Personal Consumer Services</option>
+                                            <option value="">Education</option>
+                                            <option value="">Financial Services</option>
+                                            <option value="">Government & Public Administration</option>
+                                            <option value="">Healthcare</option>
+                                            <option value="">Information Technology</option>
+                                            <option value="">Insurance</option>
+                                            <option value="">Manufacturing</option>
+                                            <option value="">Media & Communication</option>
+                                            <option value="">Nonprofit & NGO</option>
+                                            <option value="">Energy, Mining & Utilities</option>
+                                            <option value="">Real Estate</option>
+                                            <option value="">Restaurants & Food Service</option>
+                                            <option value="">Retail & Wholesale</option>
+                                            <option value="">Telecommunications</option>
+                                            <option value="">Transportation & Logistics</option>
+                                            <option value="">Hotels & Travel Accommodation</option>
+                                            <option value="">Human Resources & Staffing</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-4 col-lg-4">
+                                        <label>Location</label>
+                                        <div class="autocomplete" style="">
+                                            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-sm-12" style="padding-right: 23px;">
+                                    <div class="col-sm-8" id="advBlock" style="display:none;">
+                                        <label>Job Status</label>
+                                        <select name="jobStatus" id="jobStatus" class="dropdown" style="padding:6px;height: 40px;">
+                                            <option value="">Full-time</option>
+                                            <option value="">Part-time</option>
+                                            <option value="">Temporary</option>
+                                            <option value="">Contract</option>
+                                            <option value="">Internship</option>
+                                            <option value="">Seasonal</option>
+                                            <option value="">Self-Employed</option>
+                                            <option value="">Per Diem</option>
+                                            <option value="">Reserve</option>
+                                            <option value="">Freelance</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4" style="float: right;">
+                                        <button class="btn btn-yellow" id="advFilter" tabindex="0" type="button" style="display: flex; padding-top: 9px !IMPORTANT;padding-bottom: 5px !important; float: right; padding-right: 22px;padding-left: 15px;">
+                                            <span class="css-z6s2jv"><svg class="" style="width: 24;height: 24;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 7a1 1 0 101 1 1 1 0 00-1-1zm0-2a3 3 0 012.83 2H21a1 1 0 010 2H10.83a3 3 0 01-5.66 0H3a1 1 0 010-2h2.17A3 3 0 018 5zm8 10a1 1 0 101 1 1 1 0 00-1-1zm0-2a3 3 0 012.83 2H21a1 1 0 010 2h-2.17a3 3 0 01-5.66 0H3a1 1 0 010-2h10.17A3 3 0 0116 13z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+                                            <div style="margin-left: 5px; margin-top: 2px;">Advance Filter</div>
+                                        </button>
+                                    </div>
+                                </div>
 
+                                    <div class="col-sm-12" style="margin-top:30px;"><button type="submit" class="btn-upper btn-yellow btn" id="drawChart">Find out</button></div>
+
+                                    <div class="">
+                                        <canvas id="myChart" style=" zoom: 85%"></canvas>
+                                    </div>
+                                    <!--</form>-->
+                                </div>
+                                <div class="col-md-2">
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -284,7 +311,7 @@
 
     <script src="js/rev-slider-init.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/autocomplete.js"></script>
+    <script src="js/dataList.js"></script>
     <script>
         function renderChart(data, labels) {
             var ctx = document.getElementById("myChart").getContext('2d');
@@ -307,6 +334,15 @@
                 renderChart(data, labels);
             }
         );
+
+        $("#advFilter").click(function () {
+            var x = document.getElementById("advBlock");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        })
     </script>
 </body>
 
